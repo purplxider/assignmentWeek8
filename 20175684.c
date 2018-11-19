@@ -29,7 +29,7 @@ int main() {
 	printf("입력할 명세서 개수 입력 >> ");
 	scanf("%d", &n);
 
-	Person ** people = (Person **)malloc(sizeof(Person *) * n);
+	Person ** people = (Person **)calloc(n, sizeof(Person *));
 	getPerson(people, n);
 
 	printPeople(people, n);
